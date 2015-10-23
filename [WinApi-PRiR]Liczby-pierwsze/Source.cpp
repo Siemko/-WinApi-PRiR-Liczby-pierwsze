@@ -15,7 +15,7 @@ int main() //thread number one
 {
 	int Tnum = 1;
 	hRunMutex = CreateMutex(NULL, TRUE, NULL);
-	for (int i = 0; i < 50; i++)
+	for (int i = 0; i < 500; i++)
 	{
 		if (ifPrime(i))
 		{
@@ -38,7 +38,7 @@ int main() //thread number one
 
 void __cdecl child(void * Args)
 {
-	for (int i = 50; i < 100; i++)
+	for (int i = 500; i < 1000; i++)
 	{
 		if (ifPrime(i))
 		{
