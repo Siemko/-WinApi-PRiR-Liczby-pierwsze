@@ -32,6 +32,7 @@ int main() //thread number one
 	{
 		std::cout << "ZA KROTKO";
 	}
+	CloseHandle(hRunMutex);
 	_getch();
 	return 0;
 }
@@ -45,6 +46,7 @@ void __cdecl child(void * Args)
 			std::cout << i << " ";
 		}
 	}
+	ReleaseMutex(hRunMutex);
 	_endthread();
 }
 
